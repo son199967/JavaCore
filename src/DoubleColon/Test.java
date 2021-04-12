@@ -9,17 +9,17 @@ public class Test {
         return ("Hello " + s + "\n");
     }
 }
-class GFGH extends Test {
+class GFGH  {
 
     // instance method to override super method
-    @Override
+
     String print(String s)
     {
 
         // call the super method
         // using double colon operator
         Function<String, String>
-                func = super::print;
+                func = new Test()::print;
 
         String newValue = func.apply(s);
 //        newValue += "Bye " + s + "\n";

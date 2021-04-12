@@ -26,6 +26,12 @@ public class Example1 {
 
 
 class GFG {
+    public GFG(String a) {
+        System.out.println(a);
+    }
+
+    public GFG() {
+    }
 
     // static function to be called
     static void someFunction(String s)
@@ -49,7 +55,8 @@ class GFG {
 
         // call the static method
         // using double colon operator
-        list.forEach(GFG::someFunction);
-        list.forEach((new GFG())::someFunctionNonStatic);
+//        list.forEach(GFG::someFunction);
+//        list.forEach((new GFG())::someFunctionNonStatic);
+        list.forEach(GFG::new);
     }
 }
